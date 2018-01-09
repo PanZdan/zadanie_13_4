@@ -1,6 +1,5 @@
+var timer = require('./time');
 var os = require('os');
-var timer = require('../modules/time');
-
 
 function getOSinfo() {
 	var type = os.type();
@@ -18,7 +17,7 @@ function getOSinfo() {
 	console.log('System: ', type);
 	console.log('Release: ', release);
 	console.log('CPU model: ', cpu);
-	timer.print(uptime);
+	console.log('Uptime: ' , timer.print(uptime));
 	console.log('User name: ', userInfo.username);
 	console.log('Home dir: ', userInfo.homedir);
 }
